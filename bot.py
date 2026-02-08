@@ -13,8 +13,9 @@ from telegram.ext import (
     ContextTypes,
     filters
 )
+import os
 
-TOKEN = "TOKEN_HERE"
+TOKEN = os.getenv("TOKEN")
 
 ASK_USERNAME, ASK_TEXT = range(2)
 
@@ -209,4 +210,5 @@ app.add_handler(conv_handler)
 
 print("Бот працює 💘")
 app.run_polling()
+
 
